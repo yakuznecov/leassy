@@ -1,0 +1,45 @@
+@import 'null';
+@import 'header';
+@import 'main';
+
+html,
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #717171;
+}
+
+a {
+	color: #717171;
+	transition: all 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			color: #f90;
+		}
+	}
+
+	&:active {
+		color: #f90;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.disable-scroll {
+	position: fixed;
+	overflow: hidden;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
