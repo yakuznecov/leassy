@@ -9,8 +9,23 @@
 					"label": ""
 				},
 				{
-					"line": 9,
+					"line": 10,
 					"column": 14,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_main.scss",
+			"bookmarks": [
+				{
+					"line": 18,
+					"column": 14,
+					"label": ""
+				},
+				{
+					"line": 23,
+					"column": 13,
 					"label": ""
 				}
 			]

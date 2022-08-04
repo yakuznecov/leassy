@@ -1,0 +1,189 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.18);
+	z-index: 20;
+	transition: .4s all;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.disable-scroll {
+	position: fixed;
+	overflow: hidden;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.modal {
+	position: fixed;
+	width: 95vw;
+	max-width: 780px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30;
+	padding: 40px 24px 24px;
+	border: 1px solid #888;
+	border-radius: 16px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: #fefefe;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal.active,
+.overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal_title {
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 32px;
+}
+
+.order__form {}
+
+.order__form_wrapper {
+	display: flex;
+}
+
+.order__form_left {
+	width: 55%;
+}
+
+.order__form_right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	.order {
+		margin-top: auto;
+	}
+}
+
+.order__form_title {
+	font-size: 18px;
+	margin-bottom: 8px;
+
+	span {
+		font-weight: 700;
+		font-size: 22px;
+	}
+}
+
+.order__form_subtitle {
+	font-weight: 700;
+
+	.result {
+		font-size: 26px;
+		font-weight: 700;
+		color: #f90;
+		margin-left: 8px;
+	}
+}
+
+.modal-close {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 12px;
+	right: 12px;
+	cursor: pointer;
+
+	@media (hover: hover) {
+		&:hover svg path {
+			transition: all 0.3s ease-out;
+			stroke: #000;
+		}
+	}
+
+	&:active svg path {
+		stroke: #000;
+	}
+}
+
+.hours__wrapper {
+	display: flex;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.stv-radio-button {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.hours_item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid #d68000;
+	margin-right: -1px;
+	color: #fff;
+	background-color: #f90;
+}
+
+.stv-radio-button+label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.stv-radio-button+label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+.stv-radio-button:checked+label {
+	background-color: #d68000;
+	font-weight: 600;
+}
+
+.tool {
+	width: 150px;
+}
+
+.data__inner {
+	position: relative;
+}
+
+.data_title {
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+
+.data__input {
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	height: 42px;
+	font-size: 15px;
+	padding: 0 14px;
+	width: 100%;
+	margin-bottom: 20px;
+
+	@media (hover: hover) {
+		&:hover {
+			border: 1px solid rgb(116, 116, 116);
+		}
+	}
+
+	&:focus {
+		border: 2px solid #f90;
+		padding: 0 13px;
+	}
+}
+
+.pac-container {
+	position: fixed !important;
+}

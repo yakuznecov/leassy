@@ -1,0 +1,98 @@
+.footer {
+	background: #f7f7f7;
+	color: #222;
+	padding: 60px 0 30px;
+}
+
+.footer__container {
+	max-width: 1370px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.footer__top {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 48px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.footer__top_item {
+	width: 25%;
+}
+
+.footer__top_item_title {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 24px;
+}
+
+.footer__top_item_link {
+	display: block;
+	font-weight: 600;
+	padding: 10px 0;
+	font-size: 16px;
+}
+
+.footer__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+.footer__copy {
+	color: #717171;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.footer__social {
+	display: flex;
+	align-items: center;
+}
+
+.footer__social-item {
+	margin-right: 20px;
+
+	&:first-child {
+		.footer__social-icon {
+			polygon {
+				fill: #717171;
+			}
+
+			@media (hover: hover) {
+				&:hover polygon {
+					fill: #f90;
+					transition: all 0.2s;
+				}
+			}
+
+			&:active polygon {
+				fill: #f90;
+				transition: all 0.2s;
+			}
+		}
+	}
+}
+
+.footer__social-icon {
+	width: 24px;
+	height: 24px;
+	transition: all 0.2s;
+
+	path {
+		fill: #717171;
+	}
+
+	@media (hover: hover) {
+		&:hover path {
+			fill: #f90;
+			transition: all 0.2s;
+		}
+	}
+
+	&:active path {
+		fill: #f90;
+	}
+}

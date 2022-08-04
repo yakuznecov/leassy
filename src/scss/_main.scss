@@ -1,7 +1,11 @@
+.hidden {
+	height: 86px;
+}
+
 .main {
 	max-width: 1360px;
 	margin: 0 auto;
-	padding: 24px 40px;
+	padding: 24px 40px 60px;
 }
 
 .main__title {
@@ -13,13 +17,14 @@
 }
 
 .main__inner {
-	max-width: 680px;
+	max-width: 740px;
 	margin: 0 auto;
 }
 
 .main__card {
 	display: flex;
 	padding: 24px;
+	margin-bottom: 32px;
 	border-radius: 12px;
 	box-shadow: 0 0 0 1px rgba(13, 35, 67, .07), 0 5px 15px -8px rgba(13, 35, 67, .4);
 }
@@ -63,7 +68,7 @@
 	min-width: 0;
 
 	.title {
-		font-size: 28px;
+		font-size: 32px;
 		font-weight: 700;
 		line-height: 36px;
 		color: #424242;
@@ -87,39 +92,73 @@
 			color: #ff3e96;
 			font-weight: 600;
 		}
-	}
 
-	.footer {
-		display: flex;
-		align-items: center;
-		margin-top: 16px;
-
-		.order {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			min-width: 140px;
-			height: 48px;
-			font-size: 16px;
-			font-weight: 700;
-			color: #fff;
-			border: none;
-			border-radius: 4px;
-			background: #f90;
-			cursor: pointer;
-			-webkit-appearance: none;
-
-			transition: all 0.2s;
-
-			@media (hover: hover) {
-				&:hover {
-					background: rgb(231, 139, 0);
-				}
+		.inventory {
+			span {
+				font-weight: 700;
 			}
 
-			&:active {
-				background: rgb(231, 139, 0);
+			.price {
+				font-weight: 600;
 			}
 		}
+	}
+
+
+}
+
+.main__card_footer {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+
+
+
+	.safeguard {
+		margin-left: 24px;
+
+		.safeguard_item {
+			display: flex;
+			align-items: center;
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+
+			span {
+				margin-left: 8px;
+				font-size: 13px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.order {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 190px;
+	height: 48px;
+	font-size: 16px;
+	font-weight: 700;
+	margin-left: auto;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	background: #f90;
+	cursor: pointer;
+	-webkit-appearance: none;
+
+	transition: all 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			background: rgb(231, 139, 0);
+		}
+	}
+
+	&:active {
+		background: rgb(231, 139, 0);
 	}
 }

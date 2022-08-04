@@ -1,6 +1,9 @@
 @import 'null';
+@import 'global';
 @import 'header';
 @import 'main';
+@import 'footer';
+@import 'modal-order';
 
 html,
 body {
@@ -12,6 +15,7 @@ body {
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: #717171;
+	line-height: 1.5;
 }
 
 a {
@@ -33,13 +37,4 @@ a {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-}
-
-.disable-scroll {
-	position: fixed;
-	overflow: hidden;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	width: 100%;
 }

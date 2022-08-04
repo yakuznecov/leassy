@@ -5,18 +5,18 @@
 			e.mozMatchesSelector ||
 			e.webkitMatchesSelector ||
 			function (e) {
-				for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t; )
+				for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;)
 					++n;
 				return Boolean(o[n]);
 			}),
 		'function' != typeof e.closest &&
-			(e.closest = function (e) {
-				for (var t = this; t && 1 === t.nodeType; ) {
-					if (t.matches(e)) return t;
-					t = t.parentNode;
-				}
-				return null;
-			});
+		(e.closest = function (e) {
+			for (var t = this; t && 1 === t.nodeType;) {
+				if (t.matches(e)) return t;
+				t = t.parentNode;
+			}
+			return null;
+		});
 })(window.Element.prototype);
 
 // Modal
@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		body = document.body,
 		closeButtons = document.querySelectorAll('.js-modal-close');
 	const fixBlocks = document.querySelectorAll('.fix-block');
-	const link = document.querySelector('.registration-form-link.js-open-modal');
-	const modalCardBtn = document.querySelector('.modal-card-btn');
-	const modalCardConfirmBtn = document.querySelector('.modal-card-confirm-btn');
-	const modalCardAcceptBtn = document.querySelector('.modal-card-accept-btn');
+	const header = document.querySelector('.header');
 
 	function disableScroll() {
 		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -39,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			el.style.paddingRight = paddingOffset;
 		});
 		body.style.paddingRight = paddingOffset;
+		header.style.paddingRight = paddingOffset;
 		body.classList.add('disable-scroll');
 		body.dataset.position = pagePosition;
 		body.style.top = -pagePosition + 'px';
@@ -52,35 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			el.style.paddingRight = '0px';
 		});
 		body.style.paddingRight = '0px';
+		header.style.paddingRight = '0px';
 		window.scroll({ top: pagePosition, left: 0 });
 		body.removeAttribute('data-position');
 	}
-
-	link &&
-		link.addEventListener('click', function () {
-			document.querySelector('.modal.active[data-modal="1"]').classList.remove('active');
-			enableScroll();
-		});
-
-	modalCardBtn &&
-		modalCardBtn.addEventListener('click', function () {
-			document.querySelector('.modal.active[data-modal="3"]').classList.remove('active');
-			enableScroll();
-			overlay.classList.remove('active');
-		});
-
-	modalCardAcceptBtn &&
-		modalCardAcceptBtn.addEventListener('click', function () {
-			document.querySelector('.modal.active[data-modal="5"]').classList.remove('active');
-			enableScroll();
-			overlay.classList.remove('active');
-		});
-
-	modalCardConfirmBtn &&
-		modalCardConfirmBtn.addEventListener('click', function () {
-			document.querySelector('.modal.active[data-modal="4"]').classList.remove('active');
-			enableScroll();
-		});
 
 	modalButtons.forEach((item) => {
 		item.addEventListener('click', function (e) {
@@ -143,4 +116,55 @@ document.addEventListener('DOMContentLoaded', () => {
 			dropBtn.classList.remove('active');
 		}
 	});
+});
+
+// Hours cost
+document.addEventListener('DOMContentLoaded', () => {
+	const label = document.querySelectorAll('.hours_item_js');
+	const result = document.querySelector('.order__form_subtitle .result');
+	const hour1 = document.querySelector('#orderHour1');
+	const hour2 = document.querySelector('#orderHour2');
+	const hour3 = document.querySelector('#orderHour3');
+	const hour4 = document.querySelector('#orderHour4');
+	const hour5 = document.querySelector('#orderHour5');
+	const leassyTools = document.querySelector('#leassy-tools');
+	const yourTools = document.querySelector('#your-tools');
+
+	label.forEach((item) => {
+		item.addEventListener('click', function (event) {
+			let el = event.target.innerHTML;
+
+			if (leassyTools.checked) {
+				if (el === '1') result.innerHTML = '40000';
+				if (el === '2') result.innerHTML = '80000';
+				if (el === '3') result.innerHTML = '120000';
+				if (el === '4') result.innerHTML = '160000';
+				if (el === '5') result.innerHTML = '200000';
+			}
+
+			if (yourTools.checked) {
+				if (el === '1') result.innerHTML = '30000';
+				if (el === '2') result.innerHTML = '60000';
+				if (el === '3') result.innerHTML = '90000';
+				if (el === '4') result.innerHTML = '120000';
+				if (el === '5') result.innerHTML = '150000';
+			}
+		});
+	});
+
+	leassyTools.addEventListener('click', function () {
+		if (hour1.checked) result.innerHTML = '40000';
+		if (hour2.checked) result.innerHTML = '80000';
+		if (hour3.checked) result.innerHTML = '120000';
+		if (hour4.checked) result.innerHTML = '160000';
+		if (hour5.checked) result.innerHTML = '200000';
+	})
+
+	yourTools.addEventListener('click', function () {
+		if (hour1.checked) result.innerHTML = '30000';
+		if (hour2.checked) result.innerHTML = '60000';
+		if (hour3.checked) result.innerHTML = '90000';
+		if (hour4.checked) result.innerHTML = '120000';
+		if (hour5.checked) result.innerHTML = '150000';
+	})
 });
