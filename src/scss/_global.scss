@@ -5,3 +5,37 @@
 .mb-20 {
 	margin-bottom: 20px;
 }
+
+.flexible__img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+	font-weight: 900;
+	min-width: 180px;
+	height: 45px;
+	font-size: 22px;
+	color: #fff;
+	user-select: none;
+	border-radius: 25px;
+	background: linear-gradient(180deg, #ffbb45, #f46d04);
+
+	@media (hover: hover) {
+		&:hover {
+			background: linear-gradient(180deg, #fdb539, #d45c00);
+			transform: translateY(-1px);
+			box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+		}
+	}
+
+	&:active {
+		background: linear-gradient(180deg, #fdb539, #d45c00);
+		transform: translateY(-1px);
+		box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+	}
+}

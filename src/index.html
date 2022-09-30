@@ -16,236 +16,18 @@
 <body>
 	<div class="wrapper">
 		<div class="hidden"></div>
+		@@include('header.html')
 
-		<div class="main">
-			@@include('header.html')
-			<h1 class="main__title">Cleaning service</h1>
-			<div class="main__inner">
-				<div class="main__card">
-					<div class="main__card_left">
-						<div class="image">
-							<img src="images/room_1.png" alt="room">
-						</div>
-						<div class="check">
-							<img src="check.svg" alt="check">
-							<span>Еmployee is verified</span>
-						</div>
+		<div class="mainblock">
+			<div class="container">
+				<div class="mainblock__wrapper">
+					<div class="mainblock__content">
+						<h1 class="mainblock__content_title">Lorem ipsum dolor sit amet</h1>
+						<p class="mainblock__content_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis quasi dicta, sequi praesentium deleniti ducimus ut illo fugiat</p>
+						<button class="main-btn">Order</button>
 					</div>
-					<div class="main__card_right">
-						<h2 class="title">Сleaning the room</h2>
-						<div class="item">
-							<span class="subtitle">Description:</span>
-							<span>Cleaning your room</span>
-						</div>
-						<div class="item">
-							<span class="enabled">Enabled:</span>
-							<span>Toilet</span>
-						</div>
-						<div class="item">
-							<span class="excluded">Excluded:</span>
-							<span>Moving furniture / Ceiling washing</span>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with your inventory: </span><span class="price">RP 35000/</span>hour</p>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with our inventory: </span><span class="price">RP 45000/</span>hour</p>
-						</div>
-						<div class="main__card_footer">
-							<button class="order js-open-modal" data-modal="order">Order</button>
-							<div class="safeguard">
-								<div class="safeguard_item">
-									<img src="images/shield.png" alt="shield">
-									<span>Safety: Guaranteed</span>
-								</div>
-								<div class="safeguard_item">
-									<img src="images/area.png" alt="area">
-									<span>Min: 0m2</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="main__card">
-					<div class="main__card_left">
-						<div class="image">
-							<img src="images/house.png" alt="house">
-						</div>
-						<div class="check">
-							<img src="check.svg" alt="check">
-							<span>Еmployee is verified</span>
-						</div>
-					</div>
-					<div class="main__card_right">
-						<h2 class="title">House cleaning</h2>
-						<div class="item">
-							<span class="subtitle">Description:</span>
-							<span>Cleaning your home</span>
-						</div>
-						<div class="item">
-							<span class="enabled">Enabled:</span>
-							<span>Bedroom, hallway, kitchen, front and back patio</span>
-						</div>
-						<div class="item">
-							<span class="excluded">Excluded:</span>
-							<span>Moving furniture / Ceiling washing</span>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with your inventory: </span><span class="price">RP 30000/</span>hour</p>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with our inventory: </span><span class="price">RP 40000/</span>hour</p>
-						</div>
-						<div class="main__card_footer">
-							<button class="order js-open-modal" data-modal="order">Order</button>
-							<div class="safeguard">
-								<div class="safeguard_item">
-									<img src="images/shield.png" alt="shield">
-									<span>Safety: Guaranteed</span>
-								</div>
-								<div class="safeguard_item">
-									<img src="images/area.png" alt="area">
-									<span>Min: 0m2</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="main__card">
-					<div class="main__card_left">
-						<div class="image">
-							<img src="images/apartments.png" alt="apartments">
-						</div>
-						<div class="check">
-							<img src="check.svg" alt="check">
-							<span>Еmployee is verified</span>
-						</div>
-					</div>
-					<div class="main__card_right">
-						<h2 class="title">Apartment cleaning</h2>
-						<div class="item">
-							<span class="subtitle">Description:</span>
-							<span>Сleaning of your apartments of any size</span>
-						</div>
-						<div class="item">
-							<span class="enabled">Enabled:</span>
-							<span>Bedroom, hallway, kitchen, balcony</span>
-						</div>
-						<div class="item">
-							<span class="excluded">Excluded:</span>
-							<span>House Cleaning</span>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with your inventory: </span><span class="price">RP 30000/</span>hour</p>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with our inventory: </span><span class="price">RP 40000/</span>hour</p>
-						</div>
-						<div class="main__card_footer">
-							<button class="order js-open-modal" data-modal="order">Order</button>
-							<div class="safeguard">
-								<div class="safeguard_item">
-									<img src="images/shield.png" alt="shield">
-									<span>Safety: Guaranteed</span>
-								</div>
-								<div class="safeguard_item">
-									<img src="images/area.png" alt="area">
-									<span>Min: 0m2</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="main__card">
-					<div class="main__card_left">
-						<div class="image">
-							<img src="images/smallofice.png" alt="smallofice">
-						</div>
-						<div class="check">
-							<img src="check.svg" alt="check">
-							<span>Еmployee is verified</span>
-						</div>
-					</div>
-					<div class="main__card_right">
-						<h2 class="title">Cleaning a small office</h2>
-						<div class="item">
-							<span class="subtitle">Description:</span>
-							<span>Cleaning service for cleaning a small office</span>
-						</div>
-						<div class="item">
-							<span class="enabled">Enabled:</span>
-							<span>Cleaning of office premises</span>
-						</div>
-						<div class="item">
-							<span class="excluded">Excluded:</span>
-							<span>Moving furniture / Ceiling washing</span>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with your inventory: </span><span class="price">RP 30000/</span>hour</p>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with our inventory: </span><span class="price">RP 40000/</span>hour</p>
-						</div>
-						<div class="main__card_footer">
-							<button class="order js-open-modal" data-modal="order">Order</button>
-							<div class="safeguard">
-								<div class="safeguard_item">
-									<img src="images/shield.png" alt="shield">
-									<span>Safety: Guaranteed</span>
-								</div>
-								<div class="safeguard_item">
-									<img src="images/area.png" alt="area">
-									<span>Min: 0m2</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="main__card">
-					<div class="main__card_left">
-						<div class="image">
-							<img src="images/bigoffice.png" alt="bigoffice">
-						</div>
-						<div class="check">
-							<img src="check.svg" alt="check">
-							<span>Еmployee is verified</span>
-						</div>
-					</div>
-					<div class="main__card_right">
-						<h2 class="title">Cleaning a large office</h2>
-						<div class="item">
-							<span class="subtitle">Description:</span>
-							<span>Cleaning service for cleaning a large office</span>
-						</div>
-						<div class="item">
-							<span class="enabled">Enabled:</span>
-							<span>Cleaning of office premises</span>
-						</div>
-						<div class="item">
-							<span class="excluded">Excluded:</span>
-							<span>Moving furniture / Ceiling washing</span>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with your inventory: </span><span class="price">RP 27000/</span>hour</p>
-						</div>
-						<div class="item">
-							<p class="inventory"><span>Сleaning with our inventory: </span><span class="price">RP 30000/</span>hour</p>
-						</div>
-						<div class="main__card_footer">
-							<button class="order js-open-modal" data-modal="order">Order</button>
-							<div class="safeguard">
-								<div class="safeguard_item">
-									<img src="images/shield.png" alt="shield">
-									<span>Safety: Guaranteed</span>
-								</div>
-								<div class="safeguard_item">
-									<img src="images/area.png" alt="area">
-									<span>Min: 0m2</span>
-								</div>
-							</div>
-						</div>
+					<div class="mainblock__img">
+						<img class='flexible__img' src="images/main-bg.png" alt="main-bg">
 					</div>
 				</div>
 			</div>
@@ -285,14 +67,13 @@
 				</div>
 				<div class="footer__bottom">
 					<p class="footer__copy">
-						<span> ©</span> 2021 Leassy Inc. All rights reserved
+						<span> ©</span> 2022 Leassy Inc. All rights reserved
 					</p>
 					<ul class="footer__social">
 						<li class="footer__social-item">
 							<a href="mailto:info@leassy.com" class="footer__social-link">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
-									style="enable-background:new 0 0 512 512;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/email.svg"
-									class="svg-inline footer__social-icon">
+									style="enable-background:new 0 0 512 512;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/email.svg" class="svg-inline footer__social-icon">
 									<g>
 										<g>
 											<polygon points="339.392,258.624 512,367.744 512,144.896   "></polygon>
@@ -315,44 +96,14 @@
 											</path>
 										</g>
 									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
+
 								</svg>
 							</a>
 						</li>
 						<li class="footer__social-item">
 							<a href="https://wa.me/message/WC5ZRYYD57ZWL1" class="footer__social-link">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
-									style="enable-background:new 0 0 512 512;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/whatsapp.svg"
-									class="svg-inline footer__social-icon">
+									style="enable-background:new 0 0 512 512;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/whatsapp.svg" class="svg-inline footer__social-icon">
 									<g>
 										<g>
 											<path
@@ -360,86 +111,27 @@
 											</path>
 										</g>
 									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
+
 								</svg>
 							</a>
 						</li>
 						<li class="footer__social-item">
 							<a href="https://t.me/leassy_support" class="footer__social-link">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300"
-									style="enable-background:new 0 0 300 300;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/telegram.svg"
-									class="svg-inline footer__social-icon">
+									style="enable-background:new 0 0 300 300;" xml:space="preserve" data-inject-url="https://leassy.com/static/index/new_img/icons/telegram.svg" class="svg-inline footer__social-icon">
 									<g id="XMLID_496_--inject-4">
 										<path id="XMLID_497_--inject-4"
 											d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z">
 										</path>
 									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
+
 								</svg>
 							</a>
 						</li>
 						<li class="footer__social-item">
 							<a href="https://www.instagram.com/leassyme/" class="footer__social-link">
-								<svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512.00006" width="512pt"
-									data-inject-url="https://leassy.com/static/index/new_img/icons/instagram.svg" class="svg-inline footer__social-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512.00006" width="512pt" data-inject-url="https://leassy.com/static/index/new_img/icons/instagram.svg"
+									class="svg-inline footer__social-icon">
 									<path
 										d="m261.039062 512c-1.695312 0-3.390624 0-5.097656-.007812-40.132812.097656-77.214844-.921876-113.277344-3.117188-33.0625-2.011719-63.242187-13.4375-87.28125-33.039062-23.195312-18.914063-39.035156-44.488282-47.078124-76.003907-7-27.4375-7.371094-54.371093-7.726563-80.421875-.257813-18.691406-.5234375-40.839844-.578125-63.363281.0546875-22.617187.320312-44.765625.578125-63.457031.355469-26.046875.726563-52.980469 7.726563-80.421875 8.042968-31.515625 23.882812-57.089844 47.078124-76.003907 24.039063-19.601562 54.21875-31.027343 87.285157-33.039062 36.0625-2.191406 73.152343-3.2148438 113.371093-3.1171875 40.144532-.0859375 77.214844.9257815 113.277344 3.1171875 33.0625 2.011719 63.242188 13.4375 87.28125 33.039062 23.199219 18.914063 39.035156 44.488282 47.078125 76.003907 7 27.4375 7.371094 54.375 7.726563 80.421875.257812 18.691406.527344 40.839844.578125 63.363281v.09375c-.050781 22.523437-.320313 44.671875-.578125 63.363281-.355469 26.046875-.722656 52.980469-7.726563 80.421875-8.042969 31.515625-23.878906 57.089844-47.078125 76.003907-24.039062 19.601562-54.21875 31.027343-87.28125 33.039062-34.535156 2.101562-70.011718 3.125-108.277344 3.125zm-5.097656-40.007812c39.480469.09375 75.730469-.902344 110.945313-3.042969 25-1.519531 46.675781-9.632813 64.433593-24.113281 16.414063-13.386719 27.71875-31.855469 33.597657-54.894532 5.828125-22.839844 6.164062-47.363281 6.488281-71.078125.253906-18.566406.519531-40.558593.574219-62.863281-.054688-22.308594-.320313-44.296875-.574219-62.863281-.324219-23.714844-.660156-48.238281-6.488281-71.082031-5.878907-23.039063-17.183594-41.507813-33.597657-54.894532-17.757812-14.476562-39.433593-22.589844-64.433593-24.109375-35.214844-2.144531-71.464844-3.132812-110.851563-3.046875-39.472656-.09375-75.726562.902344-110.941406 3.046875-25 1.519531-46.675781 9.632813-64.433594 24.109375-16.414062 13.386719-27.71875 31.855469-33.597656 54.894532-5.828125 22.84375-6.164062 47.363281-6.488281 71.082031-.253907 18.582031-.519531 40.585937-.574219 62.910156.054688 22.226563.320312 44.234375.574219 62.816406.324219 23.714844.660156 48.238281 6.488281 71.078125 5.878906 23.039063 17.183594 41.507813 33.597656 54.894532 17.757813 14.476562 39.433594 22.589843 64.433594 24.109374 35.214844 2.144532 71.476562 3.144532 110.847656 3.046876zm-.953125-90.992188c-68.921875 0-125-56.074219-125-125s56.078125-125 125-125c68.925781 0 125 56.074219 125 125s-56.074219 125-125 125zm0-210c-46.867187 0-85 38.132812-85 85s38.132813 85 85 85c46.871094 0 85-38.132812 85-85s-38.128906-85-85-85zm139-80c-16.566406 0-30 13.429688-30 30s13.433594 30 30 30c16.570313 0 30-13.429688 30-30s-13.429687-30-30-30zm0 0">
 									</path>
