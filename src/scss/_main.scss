@@ -14,13 +14,7 @@
 	width: 100%;
 }
 
-.main__title {
-	font-size: 40px;
-	line-height: 40px;
-	font-weight: 700;
-	margin-bottom: 48px;
-	color: rgb(36, 36, 36);
-}
+
 
 .main__inner {
 	max-width: 740px;
@@ -172,7 +166,7 @@
 // mainblock
 
 .mainblock {
-	margin: 90px 0 32px 0;
+	margin: 90px 0 96px;
 }
 
 .mainblock__wrapper {
@@ -208,4 +202,40 @@
 	img {
 		width: 250px;
 	}
+}
+
+// About
+
+.about {
+	margin: 0 0 96px 0;
+}
+
+// Video
+
+.video__container {
+	margin: 0 0 96px 0;
+}
+
+.video__box {
+	position: relative;
+	padding-top: 56.25%;
+
+	iframe {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+	}
+}
+
+// Faq
+
+.faq__container {
+	margin: 0 0 96px;
+}
+
+.faq__wrapper {
+	width: 100%;
 }

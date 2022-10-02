@@ -6,10 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Leassy</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -18,13 +19,14 @@
 		<div class="hidden"></div>
 		@@include('header.html')
 
+		<!-- Start: mainblock -->
 		<div class="mainblock">
 			<div class="container">
 				<div class="mainblock__wrapper">
 					<div class="mainblock__content">
 						<h1 class="mainblock__content_title">Lorem ipsum dolor sit amet</h1>
 						<p class="mainblock__content_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis quasi dicta, sequi praesentium deleniti ducimus ut illo fugiat</p>
-						<button class="main-btn">Order</button>
+						<button class="main-btn js-open-modal" data-modal="orderModal">Order</button>
 					</div>
 					<div class="mainblock__img">
 						<img class='flexible__img' src="images/main-bg.png" alt="main-bg">
@@ -32,6 +34,149 @@
 				</div>
 			</div>
 		</div>
+		<!-- End: mainblock -->
+
+		<!-- Start: about -->
+		<div class="about">
+			<div class="container">
+				<h2 class='main__title'>Какие мы офигенные</h2>
+				<div style="--swiper-navigation-color: #f90; --swiper-pagination-color: #f90" class="swiper aboutSwiper">
+					<div class="parallax-bg" style="background-image: url(./images/bali.jpg);" data-swiper-parallax="-23%"></div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide aboutSwiper-slide">
+							<div class="title" data-swiper-parallax="-300">Лучше всех</div>
+							<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+							<div class="text" data-swiper-parallax="-100">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+									dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+									laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+									Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+									Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+									ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+									tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide aboutSwiper-slide">
+							<div class="title" data-swiper-parallax="-300">Просто бомба</div>
+							<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+							<div class="text" data-swiper-parallax="-100">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+									dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+									laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+									Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+									Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+									ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+									tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide aboutSwiper-slide">
+							<div class="title" data-swiper-parallax="-300">Потрясающий сервис</div>
+							<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+							<div class="text" data-swiper-parallax="-100">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+									dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+									laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+									Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+									Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+									ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+									tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<!-- End: about -->
+
+		<!-- Start: afterBefore slider -->
+		<div class="afterBefore__container">
+			<h2 class='main__title'>До и после</h2>
+			<div class="afterBefore-wrapper">
+				<div class="afterBefore">
+					<div class="before">
+						<img class="content-image" src="images/after.png" draggable="false" />
+					</div>
+					<div class="after">
+						<img class="content-image" src="images/before.png" draggable="false" />
+					</div>
+					<div class="scroller">
+						<svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+							<polygon points="0 50 37 68 37 32 0 50" style="fill:#f90" />
+							<polygon points="100 50 64 32 64 68 100 50" style="fill:#f90" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End: afterBefore slider -->
+
+		<!-- Start: FAQ -->
+		<div class="faq__container">
+			<div class="container">
+				<h2 class='main__title'>FAQ</h2>
+				<div class="faq__wrapper">
+					<div class="wrapper__accordion">
+						<button class="toggle">
+							What is the return policy?
+							<i class="fas fa-plus icon"></i>
+						</button>
+						<div class="content">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aliquam facere adipisci quod mollitia, aut nemo deleniti fugiat et, corrupti sequi. Omnis dolorem quos eligendi
+								placeat soluta sint corrupti quod.</p>
+						</div>
+					</div>
+					<div class="wrapper__accordion">
+						<button class="toggle">
+							How do I apply the coupon?
+							<i class="fas fa-plus icon"></i>
+						</button>
+						<div class="content">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus autem aperiam reprehenderit? Ipsum maiores dolore inventore ea.
+								Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus
+								autem aperiam reprehenderit? Ipsum maiores dolore inventore ea.
+								Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam?</p>
+						</div>
+					</div>
+					<div class="wrapper__accordion">
+						<button class="toggle">
+							How do I become a member?
+							<i class="fas fa-plus icon"></i>
+						</button>
+						<div class="content">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consectetur officiis labore commodi sunt ex praesentium dolor magnam asperiores reiciendis. Minus magnam nesciunt
+								aliquid eos ipsam sequi recusandae quos incidunt.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End: FAQ -->
+
+		<!-- Start: video -->
+		<div class="video__container">
+			<div class="container">
+				<div class="video__wrapper">
+					<h1 class="main__title">Видео о нас</h1>
+					<div class="video__box">
+						<iframe width="790" height="444.375" src="https://www.youtube.com/embed/K1QICrgxTjA" title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End: video -->
+
+
 
 		<footer class="footer">
 			<div class="footer__container">
@@ -66,9 +211,6 @@
 					</div>
 				</div>
 				<div class="footer__bottom">
-					<p class="footer__copy">
-						<span> ©</span> 2022 Leassy Inc. All rights reserved
-					</p>
 					<ul class="footer__social">
 						<li class="footer__social-item">
 							<a href="mailto:info@leassy.com" class="footer__social-link">
@@ -192,11 +334,15 @@
 							</a>
 						</li>
 					</ul>
+					<p class="footer__copy">
+						<span> ©</span> 2022 Leassy Inc. All rights reserved
+					</p>
 				</div>
 			</div>
 		</footer>
 
 		<div class="fix-block">
+			<!-- test modal -->
 			<div class="modal" data-modal="order">
 				<h2 class="modal_title">Leassy Cleaning order</h2>
 				<form action="" method="POST" class="order__form">
@@ -266,26 +412,76 @@
 					<img src="x-close-modal.svg" alt="close-btn">
 				</button>
 			</div>
+
+			<!-- Order modal -->
+			<div class="modal order__modal" data-modal="orderModal">
+				<h2 class="modal_title">Leassy Cleaning</h2>
+				<form action="" method="POST" class="order__form">
+					<div class="order__modal_inner">
+						<div class="order__modal_select">
+							<div class="select__container">
+								<select class="select" id="booking_bathrooms">
+									<option value="0">0 beds</option>
+									<option value="1">2 beds</option>
+									<option value="2">3 beds</option>
+									<option value="3">4 beds</option>
+									<option value="4">5 beds</option>
+									<option value="5">6 beds</option>
+									<option value="6">7 beds</option>
+								</select>
+							</div>
+						</div>
+						<div class="order__modal_select">
+							<div class="select__container">
+								<select class="select" id="booking_baths">
+									<option value="0">0 baths</option>
+									<option value="1">2 baths</option>
+									<option value="2">3 baths</option>
+									<option value="3">4 baths</option>
+									<option value="4">5 baths</option>
+									<option value="5">6 baths</option>
+									<option value="6">7 baths</option>
+								</select>
+							</div>
+						</div>
+						<div class="order__modal_select">
+							<div class="select__container">
+								<select class="select" id="booking_hours">
+									<option value="0">0 hours</option>
+									<option value="1">2 hours</option>
+									<option value="2">3 hours</option>
+									<option value="3">4 hours</option>
+									<option value="4">5 hours</option>
+									<option value="5">6 hours</option>
+									<option value="6">7 hours</option>
+								</select>
+							</div>
+						</div>
+						<div class="order__modal_select">
+							<input type="datetime-local" class="data__input" name="from_date" id='booking_date'>
+						</div>
+					</div>
+					<div class="order__modal_inner">
+						<div class="order__modal_select">
+							<input type="text" name="email" class="data__input" placeholder="info@leassy.com" maxlength="50" id="email">
+						</div>
+						<div class="order__modal_select">
+							<input placeholder="Phone Number" maxlength="14" class="data__input" size="14" type="tel" name="phone" id="phone">
+						</div>
+						<button type='submit' class="main-btn order__modal_btn">Get a price</button>
+					</div>
+				</form>
+			</div>
 		</div>
 
 		<div class="overlay js-overlay-modal"></div>
 	</div>
 
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/afterBefore.js"></script>
+	<script src="js/faq.js"></script>
+	<script src="js/sliders.js"></script>
 	<script src="js/main.js"></script>
-
-	<script>
-		let autocomplete;
-
-		function initAutocomplete() {
-			autocomplete = new google.maps.places.Autocomplete(
-				document.getElementById('address'),
-				{
-					componentRestrictions: { country: ["ID"] },
-					types: ["geocode"],
-				});
-		}
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&callback=initAutocomplete&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 
 </html>
