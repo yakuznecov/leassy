@@ -4,13 +4,13 @@
 	background: #000;
 }
 
+
 .aboutSwiper-slide {
 	font-size: 18px;
 	color: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 40px 60px;
-	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .parallax-bg {
@@ -25,16 +25,18 @@
 }
 
 .aboutSwiper-slide .title {
-	font-size: 41px;
-	font-weight: 300;
+	font-size: 32px;
+	font-weight: 600;
+	margin: 0 0 32px;
 }
 
 .aboutSwiper-slide .subtitle {
 	font-size: 21px;
+	display: none;
 }
 
 .aboutSwiper-slide .text {
-	font-size: 14px;
+	font-size: 16px;
 	max-width: 400px;
-	line-height: 1.3;
+	line-height: 24px;
 }

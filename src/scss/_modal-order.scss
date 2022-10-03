@@ -28,8 +28,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 30;
-	padding: 40px 24px 24px;
-	border: 1px solid #888;
+	padding: 20px 32px 24px;
+	// border: 1px solid #888;
+	border: 1px solid #f90;
 	border-radius: 16px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color: #fefefe;
@@ -54,6 +55,7 @@
 
 .order__form_wrapper {
 	display: flex;
+	justify-content: space-between;
 }
 
 .order__form_left {
@@ -64,6 +66,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	max-width: 300px;
 
 	.order {
 		margin-top: auto;
@@ -71,20 +74,21 @@
 }
 
 .order__form_title {
-	font-size: 18px;
+	font-size: 14px;
 	margin-bottom: 8px;
 
 	span {
 		font-weight: 700;
-		font-size: 22px;
+		font-size: 16px;
 	}
 }
 
 .order__form_subtitle {
 	font-weight: 700;
+	font-size: 14px;
 
 	.result {
-		font-size: 26px;
+		font-size: 24px;
 		font-weight: 700;
 		color: #f90;
 		margin-left: 8px;
@@ -113,8 +117,22 @@
 
 .hours__wrapper {
 	display: flex;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	overflow: hidden;
+}
+
+.hours__wrapper_info {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	max-width: 300px;
+	margin-bottom: 16px;
+
+	p {
+		font-size: 12px;
+		max-width: 90px;
+		font-weight: 600;
+	}
 }
 
 .stv-radio-button {
@@ -127,14 +145,15 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
+	font-weight: 600;
 	cursor: pointer;
 	user-select: none;
-	border: 1px solid #d68000;
+	border: 1px solid #f90;
 	margin-right: -1px;
-	color: #fff;
-	background-color: #f90;
+	color: #353535;
+	background-color: #fff;
 }
 
 .stv-radio-button+label:first-of-type {
@@ -146,8 +165,9 @@
 }
 
 .stv-radio-button:checked+label {
-	background-color: #d68000;
+	background-color: #f90;
 	font-weight: 600;
+	color: #fff;
 }
 
 .tool {
@@ -162,14 +182,16 @@
 	display: inline-block;
 	font-weight: 700;
 	margin-bottom: 4px;
+	font-size: 14px;
 }
 
 .data__input {
 	border: 1px solid #aaa;
 	border-radius: 4px;
-	height: 42px;
-	font-size: 15px;
+	height: 40px;
+	font-size: 14px;
 	padding: 0 14px;
+	max-width: 300px;
 	width: 100%;
 
 	@media (hover: hover) {
