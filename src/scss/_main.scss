@@ -173,15 +173,14 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	&:after {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: 1;
+	@media (max-width: 1280px) {
+		background-size: 100%;
+		padding: 12.50vw 0 0;
+		min-height: 56.41vw;
+	}
+
+	@media (max-width: 425px) {
+		padding: 30px 0 0;
 	}
 }
 
@@ -208,8 +207,7 @@
 }
 
 .mainblock__content {
-	max-width: 50%;
-	flex: 0 0 50%;
+	max-width: 100%;
 }
 
 .mainblock__content_title {
@@ -218,13 +216,32 @@
 	line-height: 60px;
 	font-weight: 700;
 	margin-bottom: 24px;
-	max-width: 380px;
+	max-width: 370px;
+
+	@media (max-width: 768px) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 24px;
+		line-height: 34px;
+		max-width: 300px;
+	}
 }
 
 .mainblock__content_subtitle {
 	font-size: 24px;
 	color: #fff;
 	margin-bottom: 24px;
+
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 16px;
+	}
 }
 
 .mainblock__img {
@@ -244,10 +261,23 @@
 	}
 }
 
+.mainblock__icon {
+	margin: 0 auto 96px;
+	width: 473px;
+
+	img {
+		max-width: 100%;
+	}
+
+	@media (max-width: 500px) {
+		width: 95vw;
+	}
+}
+
 // About
 
 .about {
-	margin: 0 0 96px 0;
+	margin: 0 0 140px 0;
 }
 
 // Video
@@ -273,7 +303,7 @@
 // Faq
 
 .faq__container {
-	margin: 0 0 96px;
+	margin: 0 0 140px;
 	background-image: url(../images/bali2.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -287,4 +317,92 @@
 
 .faq__wrapper {
 	width: 100%;
+}
+
+.wrapper__radio {
+	display: inline-flex;
+	max-width: 300px;
+	height: 30px;
+	width: 100%;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 5px;
+	margin-bottom: 8px;
+
+	.option {
+		background: #fff;
+		height: 100%;
+		width: 65px;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		margin: 0 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		padding: 0 6px;
+		border: 2px solid lightgrey;
+		transition: all 0.5s ease;
+
+		.dot {
+			position: relative;
+			height: 18px;
+			width: 18px;
+			background: #d9d9d9;
+			border-radius: 50%;
+			margin-right: 6px;
+
+			&:before {
+				position: absolute;
+				content: "";
+				top: 4px;
+				left: 4px;
+				width: 10px;
+				height: 10px;
+				background: #f90;
+				border-radius: 50%;
+				opacity: 0;
+				transform: scale(1.5);
+				transition: all 0.5s ease;
+			}
+		}
+
+		span {
+			display: flex;
+			user-select: none;
+		}
+	}
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+#option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2,
+#option-3:checked:checked~.option-3,
+#option-4:checked:checked~.option-4 {
+	border-color: #f90;
+	background: #f90;
+}
+
+#option-1:checked:checked~.option-1 .dot,
+#option-2:checked:checked~.option-2 .dot,
+#option-3:checked:checked~.option-3 .dot,
+#option-4:checked:checked~.option-4 .dot {
+	background: #fff;
+}
+
+#option-1:checked:checked~.option-1 .dot::before,
+#option-2:checked:checked~.option-2 .dot::before,
+#option-3:checked:checked~.option-3 .dot::before,
+#option-4:checked:checked~.option-4 .dot::before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+#option-1:checked:checked~.option-1 span,
+#option-2:checked:checked~.option-2 span,
+#option-3:checked:checked~.option-3 span,
+#option-4:checked:checked~.option-4 span {
+	color: #fff;
 }

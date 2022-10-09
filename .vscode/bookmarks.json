@@ -29,12 +29,17 @@
 					"label": ""
 				},
 				{
-					"line": 229,
+					"line": 246,
 					"column": 17,
 					"label": ""
 				},
 				{
-					"line": 274,
+					"line": 278,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 304,
 					"column": 17,
 					"label": ""
 				}
@@ -69,8 +74,23 @@
 					"label": ""
 				},
 				{
-					"line": 187,
+					"line": 193,
 					"column": 14,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_after-before.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 25,
+					"label": ""
+				},
+				{
+					"line": 18,
+					"column": 22,
 					"label": ""
 				}
 			]

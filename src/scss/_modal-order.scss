@@ -176,6 +176,12 @@
 
 .data__inner {
 	position: relative;
+
+	.hours-time {
+		font-size: 10px;
+		font-weight: 700;
+		text-align: center;
+	}
 }
 
 .data_title {
@@ -185,7 +191,8 @@
 	font-size: 14px;
 }
 
-.data__input {
+.data__input,
+.pikaday__display {
 	border: 1px solid #aaa;
 	border-radius: 4px;
 	height: 40px;
@@ -210,10 +217,22 @@
 	}
 }
 
+#appt {
+	width: 94%;
+}
 
+#appt:invalid+span::after {
+	position: absolute;
+	content: "✖";
+	padding-left: 5px;
+	top: 34px;
+}
 
-.pac-container {
-	position: fixed !important;
+#appt:valid+span::after {
+	position: absolute;
+	content: "✓";
+	padding-left: 5px;
+	top: 32px;
 }
 
 // order modal

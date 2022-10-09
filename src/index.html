@@ -151,10 +151,17 @@
 
 						<div class="order__form_right">
 							<div class="data__inner mb-16">
-								<label class="data_title" for="orderDateTime">
+								<label class="data_title" for="date1">
 									Date / Time:
 								</label>
-								<input type="datetime-local" id="orderDateTime" class="data__input" name="from_date" required>
+								<input type="text" id="date1" class="data__input" name="date">
+							</div>
+							<div class="data__inner mb-16">
+								<label for="appt" class="data_title">Choose a time: </label>
+
+								<input type="time" class="data__input" id="appt" name="appt" step="1800" value="09:00" min="08:00" max="19:00" required>
+								<span class="validity"></span>
+								<p class='hours-time'>(Office hours are 8am to 7pm)</p>
 							</div>
 							<div class="data__inner">
 								<label class="data_title" for="address">Address:</label>
@@ -482,36 +489,7 @@
 											d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z">
 										</path>
 									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
-									<g>
-									</g>
+
 								</svg>
 							</a>
 						</li>
@@ -528,68 +506,15 @@
 
 			<!-- Order modal -->
 			<div class="modal order__modal" data-modal="orderModal">
-				<h2 class="modal_title">Leassy Cleaning</h2>
-				<form action="" method="POST" class="order__form">
-					<div class="order__modal_inner">
-						<div class="order__modal_select">
-							<div class="select__container">
-								<select class="select" id="booking_bathrooms">
-									<option value="0">0 beds</option>
-									<option value="1">2 beds</option>
-									<option value="2">3 beds</option>
-									<option value="3">4 beds</option>
-									<option value="4">5 beds</option>
-									<option value="5">6 beds</option>
-									<option value="6">7 beds</option>
-								</select>
-							</div>
-						</div>
-						<div class="order__modal_select">
-							<div class="select__container">
-								<select class="select" id="booking_baths">
-									<option value="0">0 baths</option>
-									<option value="1">2 baths</option>
-									<option value="2">3 baths</option>
-									<option value="3">4 baths</option>
-									<option value="4">5 baths</option>
-									<option value="5">6 baths</option>
-									<option value="6">7 baths</option>
-								</select>
-							</div>
-						</div>
-						<div class="order__modal_select">
-							<div class="select__container">
-								<select class="select" id="booking_hours">
-									<option value="0">0 hours</option>
-									<option value="1">2 hours</option>
-									<option value="2">3 hours</option>
-									<option value="3">4 hours</option>
-									<option value="4">5 hours</option>
-									<option value="5">6 hours</option>
-									<option value="6">7 hours</option>
-								</select>
-							</div>
-						</div>
-						<div class="order__modal_select">
-							<input type="datetime-local" class="data__input" name="from_date" id='booking_date'>
-						</div>
-					</div>
-					<div class="order__modal_inner">
-						<div class="order__modal_select">
-							<input type="text" name="email" class="data__input" placeholder="info@leassy.com" maxlength="50" id="email">
-						</div>
-						<div class="order__modal_select">
-							<input placeholder="Phone Number" maxlength="14" class="data__input" size="14" type="tel" name="phone" id="phone">
-						</div>
-						<button type='submit' class="main-btn order__modal_btn">Get a price</button>
-					</div>
-				</form>
+
 			</div>
 		</div>
 
 		<div class="overlay js-overlay-modal"></div>
 	</div>
 
+
+	<!-- google maps -->
 	<script>
 		let autocomplete;
 
@@ -615,6 +540,7 @@
 		}
 	</script>
 
+	<!-- input contacts -->
 	<script>
 		const whatsappRadio = document.querySelector('#option-1');
 		const telegramRadio = document.querySelector('#option-2');
@@ -644,11 +570,34 @@
 		});
 	</script>
 
+	<!-- date input -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			pikadayResponsive(document.getElementById("date1"), {
+				format: "DD.MM.YYYY",
+				outputFormat: "x",
+				checkIfNativeDate: function () {
+					// return true if native date field should be used
+				},
+				placeholder: "Enter date",
+				dayOffset: 0,
+
+				pikadayOptions: {
+					position: 'top right',
+					minDate: moment().toDate(), // минимальная дата начала сегодня
+				}
+			});
+		});
+	</script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&amp;callback=initAutocomplete&amp;libraries=places&amp;callback=initAutocomplete" async=""
 		defer=""></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/afterBefore.js"></script>
 	<script src="js/faq.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/datepicker.js"></script>
 	<script src="js/sliders.js"></script>
 	<script src="js/main.js"></script>
 </body>

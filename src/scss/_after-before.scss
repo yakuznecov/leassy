@@ -1,17 +1,32 @@
 .afterBefore__container {
-	margin: 0 0 96px 0;
+	margin: 0 0 140px 0;
+}
+
+.afterBefore__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.afterBefore__inner-img {
+	max-width: 500px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .afterBefore-wrapper {
 	position: relative;
-	max-width: 900px;
-	height: 490px;
+	max-width: 540px;
+	height: 799px;
 	margin: 0 auto;
+	flex: 1;
 }
 
 .afterBefore {
-	width: 900px;
-	height: 490px;
+	width: 540px;
+	height: 799px;
 	position: absolute;
 	user-select: none;
 	left: 0;
@@ -19,9 +34,9 @@
 	overflow: hidden;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-	@media (max-width: 920px) {
-		height: 54vw;
-		width: 100%;
+	@media (max-width: 540px) {
+		height: 147.96vw;
+		width: 100vw;
 	}
 }
 
