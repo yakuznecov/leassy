@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Leassy</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +53,7 @@
 								<input type="radio" class="stv-radio-button" name="orderHour" value="5" id="orderHour5">
 								<label class="hours_item hours_item_js" for="orderHour5">5</label>
 							</div>
-							<h4 class="order__form_subtitle mb-20">Total (RP): <span class="result">40000</span></h4>
+							<h4 class="order__form_subtitle mb-20">Total (RP): <span class="result"></span></h4>
 
 							<h3 class="order__form_title"><span>Step 2.</span> Select inventory</h3>
 
@@ -159,7 +160,7 @@
 							<div class="data__inner mb-16">
 								<label for="appt" class="data_title">Choose a time: </label>
 
-								<input type="time" class="data__input" id="appt" name="appt" step="1800" value="09:00" min="08:00" max="19:00" required>
+								<input type="time" class="data__input" id="appt" name="appt" value="09:00" min="08:00" max="19:00" required>
 								<span class="validity"></span>
 								<p class='hours-time'>(Office hours are 8am to 7pm)</p>
 							</div>
@@ -174,9 +175,6 @@
 						</div>
 					</div>
 				</form>
-				<button class="modal-close js-modal-close">
-					<img src="x-close-modal.svg" alt="close-btn">
-				</button>
 			</div>
 		</div>
 		<!-- End: mainblock -->
@@ -251,9 +249,6 @@
 			<h2 class='main__title'>Before and after</h2>
 			<div class="container">
 				<div class="afterBefore__inner">
-					<div class="afterBefore__inner-img">
-						<img src="images/leassy2.svg" alt="leassy" data-skip-inject-svg="true">
-					</div>
 					<div class="afterBefore-wrapper">
 						<div class="afterBefore">
 							<div class="before">
@@ -269,6 +264,9 @@
 								</svg>
 							</div>
 						</div>
+					</div>
+					<div class="afterBefore__inner-img">
+						<img src="images/leassy2.svg" alt="leassy" data-skip-inject-svg="true">
 					</div>
 				</div>
 			</div>
@@ -356,7 +354,7 @@
 		<div class="video__container">
 			<div class="container">
 				<div class="video__wrapper">
-					<h1 class="main__title">Видео о нас</h1>
+					<h1 class="main__title">Video about us</h1>
 					<div class="video__box">
 						<iframe width="790" height="444.375" src="https://www.youtube.com/embed/K1QICrgxTjA" title="YouTube video player" frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -511,6 +509,18 @@
 		</div>
 
 		<div class="overlay js-overlay-modal"></div>
+
+		<div id='menu'>
+			<div class='Social'>
+				<i class="fa fa-phone large-phone"></i>
+			</div>
+			<div class='media'>
+				<a href="tel:+6288703062086"><i class='fa fa-phone'></i></a>
+				<a href="https://www.instagram.com/leassyme/"><i class="fab fa-instagram"></i></a>
+				<a href="https://t.me/leassy_support"><i class="fab fa-telegram"></i></a>
+				<a href="https://api.whatsapp.com/message/WC5ZRYYD57ZWL1"><i class="fab fa-whatsapp"></i></a>
+			</div>
+		</div>
 	</div>
 
 
@@ -588,6 +598,11 @@
 				}
 			});
 		});
+	</script>
+
+	<script>
+		let costLeassyTools = 40000; // стоимость услуги leassyTools (изначальное значение)
+		let costYourTools = costLeassyTools - 10000; // стоимость услуги yourTools
 	</script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&amp;callback=initAutocomplete&amp;libraries=places&amp;callback=initAutocomplete" async=""

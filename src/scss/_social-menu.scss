@@ -1,0 +1,205 @@
+#menu {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+#menu .Social {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background: #45aaf2;
+	text-align: center;
+	line-height: 65px;
+	font-size: 30px;
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+	overflow: hidden;
+}
+
+#menu .Social i {
+	text-shadow: 2px 2px 7px rgba(0, 0, 0, .7);
+}
+
+#menu .Social:before {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	background-color: #2d98da;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	transition: .5s;
+}
+
+#menu .Social:hover:before {
+	width: 100%;
+}
+
+#menu .Social:hover~.media a {
+	opacity: 1;
+}
+
+#menu .media:hover a {
+	opacity: 1;
+}
+
+#menu .Social:hover~.media {
+	transform: scale(2);
+}
+
+#menu .media:hover {
+	transform: scale(2);
+}
+
+#menu .media {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	transition: .5s;
+	border-radius: 50%;
+	transform: scale(1);
+}
+
+#menu .media a {
+	position: absolute;
+	top: 0;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	color: #333;
+	font-size: 10px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 25px;
+	transform-origin: center 50px;
+	transition: 0.8s;
+	opacity: 0;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:first-of-type {
+	transform: rotate(0deg);
+}
+
+#menu .media a:nth-of-type(2) {
+	transform: rotate(0deg);
+}
+
+#menu .media a:nth-of-type(3) {
+	transform: rotate(0deg);
+}
+
+#menu .media a:nth-of-type(4) {
+	transform: rotate(0deg);
+}
+
+#menu .media a:nth-of-type(5) {
+	transform: rotate(0deg);
+}
+
+#menu .media a:nth-of-type(6) {
+	transform: rotate(0deg);
+}
+
+#menu .media:hover a:first-of-type,
+#menu .Social:hover~.media a:first-of-type {
+	transform: rotate(375deg);
+}
+
+#menu .media:hover a:nth-of-type(2),
+#menu .Social:hover~.media a:nth-of-type(2) {
+	transform: rotate(325deg);
+}
+
+#menu .media:hover a:nth-of-type(3),
+#menu .Social:hover~.media a:nth-of-type(3) {
+	transform: rotate(275deg);
+}
+
+#menu .media:hover a:nth-of-type(4),
+#menu .Social:hover~.media a:nth-of-type(4) {
+	transform: rotate(225deg);
+}
+
+#menu .media a:first-of-type:hover {
+	background-color: #3b5999;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:nth-of-type(2):hover {
+	background-color: #e4405f;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:nth-of-type(3):hover {
+	background-color: #55acee;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:nth-of-type(4):hover {
+	background-color: #0084ff;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:nth-of-type(5):hover {
+	background-color: #34465d;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:nth-of-type(6):hover {
+	background-color: #0077B5;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#menu .media a:last-of-type:hover {
+	background-color: #25D366;
+	color: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.large-phone {
+	animation: rotate 3s infinite;
+}
+
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10% {
+		transform: rotate(20deg);
+	}
+
+	23% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}

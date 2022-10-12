@@ -17,6 +17,10 @@
 	margin-bottom: 48px;
 	color: rgb(36, 36, 36);
 	text-align: center;
+
+	@media (max-width: 414px) {
+		font-size: 32px;
+	}
 }
 
 .flexible__img {

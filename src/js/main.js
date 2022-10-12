@@ -130,41 +130,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	const leassyTools = document.querySelector('#leassy-tools');
 	const yourTools = document.querySelector('#your-tools');
 
+
+	result.innerHTML = `1 hours * ${costLeassyTools}`; // исходное значение при загрузке страницы
+
+
+
 	label.forEach((item) => {
 		item.addEventListener('click', function (event) {
+
 			let el = event.target.innerHTML;
 
 			if (leassyTools.checked) {
-				if (el === '1') result.innerHTML = '40000';
-				if (el === '2') result.innerHTML = '80000';
-				if (el === '3') result.innerHTML = '120000';
-				if (el === '4') result.innerHTML = '160000';
-				if (el === '5') result.innerHTML = '200000';
+				result.innerHTML = `${el} hours * ${costLeassyTools}`;
 			}
 
 			if (yourTools.checked) {
-				if (el === '1') result.innerHTML = '30000';
-				if (el === '2') result.innerHTML = '60000';
-				if (el === '3') result.innerHTML = '90000';
-				if (el === '4') result.innerHTML = '120000';
-				if (el === '5') result.innerHTML = '150000';
+				result.innerHTML = `${el} hours * ${costYourTools}`;
 			}
 		});
 	});
 
 	leassyTools.addEventListener('click', function () {
-		if (hour1.checked) result.innerHTML = '40000';
-		if (hour2.checked) result.innerHTML = '80000';
-		if (hour3.checked) result.innerHTML = '120000';
-		if (hour4.checked) result.innerHTML = '160000';
-		if (hour5.checked) result.innerHTML = '200000';
+		if (hour1.checked) result.innerHTML = `1 hours * ${costLeassyTools}`;
+		if (hour2.checked) result.innerHTML = `2 hours * ${costLeassyTools}`;
+		if (hour3.checked) result.innerHTML = `3 hours * ${costLeassyTools}`;
+		if (hour4.checked) result.innerHTML = `4 hours * ${costLeassyTools}`;
+		if (hour5.checked) result.innerHTML = `5 hours * ${costLeassyTools}`;
 	})
 
 	yourTools.addEventListener('click', function () {
-		if (hour1.checked) result.innerHTML = '30000';
-		if (hour2.checked) result.innerHTML = '60000';
-		if (hour3.checked) result.innerHTML = '90000';
-		if (hour4.checked) result.innerHTML = '120000';
-		if (hour5.checked) result.innerHTML = '150000';
+		if (hour1.checked) result.innerHTML = `1 hours * ${costYourTools}`;
+		if (hour2.checked) result.innerHTML = `2 hours * ${costYourTools}`;
+		if (hour3.checked) result.innerHTML = `3 hours * ${costYourTools}`;
+		if (hour4.checked) result.innerHTML = `4 hours * ${costYourTools}`;
+		if (hour5.checked) result.innerHTML = `5 hours * ${costYourTools}`;
 	})
 });
