@@ -361,6 +361,9 @@
 						</iframe>
 					</div>
 				</div>
+				<div class="order-btn">
+					<button class="order top scroll-up-js">Untuk memesan</button>
+				</div>
 			</div>
 		</div>
 		<!-- End: video -->
@@ -603,6 +606,17 @@
 	<script>
 		let costLeassyTools = 40000; // стоимость услуги leassyTools (изначальное значение)
 		let costYourTools = costLeassyTools - 10000; // стоимость услуги yourTools
+	</script>
+
+	<script>
+		const scrollUp = document.querySelector('.scroll-up-js');
+
+		scrollUp.addEventListener('click', () => {
+			window.scrollTo({
+				top: 300,
+				behavior: 'smooth'
+			})
+		});
 	</script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&amp;callback=initAutocomplete&amp;libraries=places&amp;callback=initAutocomplete" async=""

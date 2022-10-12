@@ -148,8 +148,14 @@
 	background: #f90;
 	cursor: pointer;
 	-webkit-appearance: none;
-
 	transition: all 0.2s;
+
+	&.top {
+		margin-left: initial;
+		font-size: 18px;
+		height: 52px;
+		min-width: 240px;
+	}
 
 	@media (hover: hover) {
 		&:hover {
@@ -429,4 +435,10 @@ input[type="radio"] {
 #option-3:checked:checked~.option-3 span,
 #option-4:checked:checked~.option-4 span {
 	color: #fff;
+}
+
+.order-btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 32px;
 }
