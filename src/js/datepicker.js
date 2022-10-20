@@ -4277,7 +4277,7 @@
 
 		// Check if first param is <input>
 		if (!$el.length || $el[0].tagName !== "INPUT") {
-			console.error("pikadayResponsive expects an input-field as its first element.", $el[0]);
+			// console.error("pikadayResponsive expects an input-field as its first element.", $el[0]);
 			return false;
 		}
 

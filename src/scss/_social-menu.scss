@@ -144,46 +144,56 @@
 	transform: rotate(225deg);
 }
 
-#menu .media a:first-of-type:hover {
+#menu .media a:first-of-type {
 	background-color: #3b5999;
 	color: #fff;
 	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+
+	&:hover {
+		background-color: #273d6d;
+	}
 }
 
-#menu .media a:nth-of-type(2):hover {
+#menu .media a:nth-of-type(2) {
 	background-color: #e4405f;
 	color: #fff;
 	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+
+	&:hover {
+		background-color: #c22643;
+	}
 }
 
-#menu .media a:nth-of-type(3):hover {
+#menu .media a:nth-of-type(3) {
 	background-color: #55acee;
 	color: #fff;
 	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+
+	&:hover {
+		background-color: #3981b8;
+	}
 }
 
-#menu .media a:nth-of-type(4):hover {
-	background-color: #0084ff;
-	color: #fff;
-	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
-}
-
-#menu .media a:nth-of-type(5):hover {
-	background-color: #34465d;
-	color: #fff;
-	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
-}
-
-#menu .media a:nth-of-type(6):hover {
-	background-color: #0077B5;
-	color: #fff;
-	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
-}
-
-#menu .media a:last-of-type:hover {
+#menu .media a:last-of-type {
 	background-color: #25D366;
 	color: #fff;
 	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
+
+	&:hover {
+		background-color: #1ca84f;
+	}
+}
+
+.fa-whatsapp {
+	transform: rotate(132deg);
+}
+
+.fa-telegram {
+	transform: rotate(90deg);
+}
+
+.fa-instagram {
+	transform: rotate(35deg);
 }
 
 .large-phone {

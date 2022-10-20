@@ -207,6 +207,24 @@
 		text-align: center;
 	}
 
+	.validity {
+		position: absolute;
+		top: 32px;
+		right: 72px;
+
+		@media (max-width: 768px) {
+			right: 65px;
+		}
+
+		@media (max-width: 375px) {
+			right: 60px;
+		}
+
+		@media (max-width: 360px) {
+			right: 55px;
+		}
+	}
+
 	@media (max-width: 680px) {
 		max-width: 300px;
 		margin-bottom: 16px;
@@ -258,6 +276,7 @@
 	font-weight: 700;
 	padding-left: 5px;
 	top: 34px;
+	font-size: 13px;
 }
 
 #appt:valid+span::after {
@@ -267,6 +286,7 @@
 	color: green;
 	padding-left: 5px;
 	top: 32px;
+	font-size: 13px;
 }
 
 // order modal
