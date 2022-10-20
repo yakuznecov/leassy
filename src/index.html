@@ -188,7 +188,7 @@
 
 			<h2 class='main__title'>Our Philosophy</h2>
 			<div style="--swiper-navigation-color: #f90; --swiper-pagination-color: #f90" class="swiper aboutSwiper">
-				<div class="parallax-bg" style="background-image: url(./images/bali.jpg);" data-swiper-parallax="-23%"></div>
+				<div class="parallax-bg" style="background-image: url(./images/bali.webp);" data-swiper-parallax="-23%"></div>
 				<div class="swiper-wrapper aboutSwiper-wrapper">
 					<div class="swiper-slide aboutSwiper-slide">
 						<div class="title" data-swiper-parallax="-300">EASY ONLINE BOOKING</div>
@@ -252,10 +252,10 @@
 					<div class="afterBefore-wrapper">
 						<div class="afterBefore">
 							<div class="before">
-								<img class="content-image" src="images/after.png" draggable="false" />
+								<img class="content-image" src="images/after.webp" draggable="false" />
 							</div>
 							<div class="after">
-								<img class="content-image" src="images/before.png" draggable="false" />
+								<img class="content-image" src="images/before.webp" draggable="false" />
 							</div>
 							<div class="scroller">
 								<svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
@@ -619,16 +619,66 @@
 		});
 	</script>
 
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			gsap.registerPlugin(ScrollTrigger);
+
+			const tl = gsap.timeline({ defaults: { duration: 1 } });
+			tl.from('.mainblock__order', { opacity: 0, y: 30, delay: 0.4, })
+				.from('.header__nav', {
+					scale: 0.3,
+					opacity: 0,
+				})
+				.from('.header__nav_menu', {
+					scale: 0.3,
+					opacity: 0,
+				})
+				.from('#menu', { opacity: 0, x: 60, })
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: '.mainblock__order',
+					start: 'top 50%',
+					end: 'top 30%',
+					toggleActions: 'restart none none none',
+				}
+			}).from('.mainblock__icon', { opacity: 0, y: 40, delay: .4, duration: 1 })
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: '.main__title',
+					start: 'top 50%',
+					end: 'top 30%',
+					toggleActions: 'restart none none none',
+				}
+			}).from('.afterBefore__inner-img', { opacity: 0, y: 40, delay: 1, duration: 1.5 })
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: '.faq__container',
+					start: 'top 70%',
+					end: 'top 30%',
+					delay: 2,
+					toggleActions: 'restart none none none',
+				}
+			}).fromTo('.wrapper__accordion', { opacity: 0, y: 100 },
+				{ opacity: 1, y: 0, duration: 1, stagger: 0.3 })
+		});
+
+	</script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&amp;callback=initAutocomplete&amp;libraries=places&amp;callback=initAutocomplete" async=""
 		defer=""></script>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="js/afterBefore.js"></script>
-	<script src="js/faq.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="js/datepicker.js"></script>
-	<script src="js/sliders.js"></script>
-	<script src="js/main.js"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+	<script src="js/afterBefore.js" defer></script>
+	<script src="js/faq.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" defer></script>
+	<script src="js/datepicker.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js" defer></script>
+	<script src="js/sliders.js" defer></script>
+	<script src="js/main.js" defer></script>
 </body>
 
 </html>
