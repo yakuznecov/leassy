@@ -35,17 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	scroller.addEventListener('touchstart', function () {
 		active = true;
 		scroller.classList.add('scrolling');
-	});
+	}, { passive: true });
 
 	document.body.addEventListener('touchend', function () {
 		active = false;
 		scroller.classList.remove('scrolling');
-	});
+	}, { passive: true });
 
 	document.body.addEventListener('touchcancel', function () {
 		active = false;
 		scroller.classList.remove('scrolling');
-	});
+	}, { passive: true });
 
 	document.body.addEventListener('touchmove', function (e) {
 		if (!active) return;
@@ -54,5 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		let x = touch.pageX;
 		x -= document.querySelector('.afterBefore').getBoundingClientRect().left;
 		scrollIt(x);
-	});
+	}, { passive: true });
 });

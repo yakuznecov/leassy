@@ -228,6 +228,7 @@
 	@media (max-width: 680px) {
 		max-width: 300px;
 		margin-bottom: 16px;
+		width: 100%;
 	}
 }
 
@@ -263,10 +264,6 @@
 	#picker {
 		cursor: pointer;
 	}
-}
-
-#appt {
-	width: 94%;
 }
 
 #appt:invalid+span::after {

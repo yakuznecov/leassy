@@ -1,0 +1,110 @@
+.row {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 37px;
+}
+
+.thanks-wrap {
+	background: #ffffff;
+	padding: 30px;
+	margin: 0 auto 10px;
+	max-width: 380px;
+}
+
+.checkmark {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	-webkit-animation: dash 2s ease-in-out;
+	animation: dash 2s ease-in-out;
+}
+
+.spin {
+	-webkit-animation: spin 2s;
+	animation: spin 2s;
+	transform-origin: 50% 50%;
+}
+
+h2 {
+	font-size: 30px;
+	color: #333;
+	font-weight: 700;
+	-webkit-animation: text 1s;
+	animation: text 1s;
+}
+
+h3 {
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+}
+
+@-webkit-keyframes dash {
+	0% {
+		stroke-dashoffset: 1000;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 1000;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@-webkit-keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes text {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes text {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
