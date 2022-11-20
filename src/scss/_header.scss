@@ -182,6 +182,19 @@
 	}
 }
 
+.header__nav_menu_info {
+	margin-right: 20px;
+
+	.work_time {
+		font-size: 14px;
+		line-height: 16px;
+
+		&:not(:last-child) {
+			margin: 0 0 6px;
+		}
+	}
+}
+
 .dropdown-hov {
 	position: relative;
 	display: flex;

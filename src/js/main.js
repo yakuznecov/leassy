@@ -84,3 +84,42 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (hour5.checked) result.innerHTML = `5 hours * ${costYourTools}`;
 	})
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+	const pulseBtn = document.querySelector(".pulse");
+	const modal = document.querySelector("#myModal");
+	const newModal = document.querySelector("#newModal");
+	const nope = document.querySelector("#nope");
+	const closeMe = document.querySelector("#closeMe");
+	const yep = document.querySelector("#yes");
+	const close = document.querySelector(".close");
+
+	pulseBtn.addEventListener('click', () => {
+		modal.classList.add('active');
+	});
+
+	nope.addEventListener('click', () => {
+		modal.classList.remove('active');
+	});
+
+	closeMe.addEventListener('click', () => {
+		newModal.classList.remove('active');
+	});
+
+	yep.addEventListener('click', () => {
+		modal.classList.remove('active');
+		newModal.classList.add('active');
+	});
+
+	close.addEventListener('click', () => {
+		newModal.classList.remove('active');
+		modal.classList.remove('active');
+	});
+
+	document.addEventListener("click", (e) => {
+		if (!e.target.closest(".modal") && !e.target.closest('.pulse')) {
+			newModal.classList.remove('active');
+			modal.classList.remove('active');
+		}
+	});
+});

@@ -23,7 +23,15 @@
 				<a href="/" class="header__logo" aria-label="logo">
 					<img src="images/logo.webp" alt="logo">
 				</a>
+				<div class="pulse">
+					<div class="phone"><i class="fa fa-phone"></i></div>
+					<div class="pulse_text">call back</div>
+				</div>
 				<nav class="header__nav_menu">
+					<div class="header__nav_menu_info">
+						<div class="work_time"><strong>Working hours:</strong>&nbsp;8am to 7pm</div>
+						<div class="work_time"><strong>Contact phone:</strong>&nbsp;+6288703062086</div>
+					</div>
 					<a href="/" class="link">Host your Goods</a>
 					<div class="dropdown-hov">
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 476.16 476.16"
@@ -626,6 +634,26 @@
 		</div>
 	</div>
 
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close" id="close">&times;</span>
+			<p class="modal-text">Hello, enter your number and we will call you back</p>
+			<form action="" class="frm">
+				<input type="text" name="phone" placeholder="Enter Your Phone Number" class="frm-input" id="inp">
+			</form>
+			<button class="btn-danger" id="nope">Nope</button>
+			<button type="submit" form="frm" class="btn-modal" id="yes">Yes, please</button>
+		</div>
+	</div>
+
+	<div id="newModal" class="modal2">
+		<div class="modal-content">
+			<p class="modal-text">Ok, here we go!</p>
+			<p id="status"></p>
+			<button class="btn-danger" id="closeMe">Close</button>
+		</div>
+	</div>
+
 
 	<!-- google maps -->
 	<script>
@@ -753,6 +781,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 	<script async src="js/sliders.js"></script>
 	<script src="js/main.js"></script>
+
 </body>
 
 </html>
