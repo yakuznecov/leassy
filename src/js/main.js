@@ -37,56 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
-// Hours cost
-document.addEventListener('DOMContentLoaded', () => {
-	const label = document.querySelectorAll('.hours_item_js');
-	const result = document.querySelector('.order__form_subtitle .result');
-	const hour1 = document.querySelector('#orderHour1');
-	const hour2 = document.querySelector('#orderHour2');
-	const hour3 = document.querySelector('#orderHour3');
-	const hour4 = document.querySelector('#orderHour4');
-	const hour5 = document.querySelector('#orderHour5');
-	const leassyTools = document.querySelector('#leassy-tools');
-	const yourTools = document.querySelector('#your-tools');
-
-
-	if (result) result.innerHTML = `1 hours * ${costLeassyTools}`; // исходное значение при загрузке страницы
-
-
-	label.forEach((item) => {
-		item.addEventListener('click', function (event) {
-
-			let el = event.target.innerHTML;
-
-			if (leassyTools.checked) {
-				result.innerHTML = `${el} hours * ${costLeassyTools}`;
-			}
-
-			if (yourTools.checked) {
-				result.innerHTML = `${el} hours * ${costYourTools}`;
-			}
-		});
-	});
-
-	leassyTools?.addEventListener('click', function () {
-		if (hour1.checked) result.innerHTML = `1 hours * ${costLeassyTools}`;
-		if (hour2.checked) result.innerHTML = `2 hours * ${costLeassyTools}`;
-		if (hour3.checked) result.innerHTML = `3 hours * ${costLeassyTools}`;
-		if (hour4.checked) result.innerHTML = `4 hours * ${costLeassyTools}`;
-		if (hour5.checked) result.innerHTML = `5 hours * ${costLeassyTools}`;
-	})
-
-	yourTools?.addEventListener('click', function () {
-		if (hour1.checked) result.innerHTML = `1 hours * ${costYourTools}`;
-		if (hour2.checked) result.innerHTML = `2 hours * ${costYourTools}`;
-		if (hour3.checked) result.innerHTML = `3 hours * ${costYourTools}`;
-		if (hour4.checked) result.innerHTML = `4 hours * ${costYourTools}`;
-		if (hour5.checked) result.innerHTML = `5 hours * ${costYourTools}`;
-	})
-});
 
 document.addEventListener('DOMContentLoaded', () => {
 	const pulseBtn = document.querySelector(".pulse");
+	const overlay = document.querySelector(".callOverlay");
 	const modal = document.querySelector("#myModal");
 	const newModal = document.querySelector("#newModal");
 	const nope = document.querySelector("#nope");
@@ -96,14 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	pulseBtn.addEventListener('click', () => {
 		modal.classList.add('active');
+		overlay.classList.add('active');
 	});
 
 	nope.addEventListener('click', () => {
 		modal.classList.remove('active');
+		overlay.classList.remove('active');
 	});
 
 	closeMe.addEventListener('click', () => {
 		newModal.classList.remove('active');
+		overlay.classList.remove('active');
 	});
 
 	yep.addEventListener('click', () => {
@@ -114,12 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	close.addEventListener('click', () => {
 		newModal.classList.remove('active');
 		modal.classList.remove('active');
+		overlay.classList.remove('active');
 	});
 
 	document.addEventListener("click", (e) => {
 		if (!e.target.closest(".modal") && !e.target.closest('.pulse')) {
 			newModal.classList.remove('active');
 			modal.classList.remove('active');
+			overlay.classList.remove('active');
 		}
 	});
 });

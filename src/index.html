@@ -610,16 +610,7 @@
 			</div>
 		</footer>
 
-		<div class="fix-block">
 
-
-			<!-- Order modal -->
-			<div class="modal order__modal" data-modal="orderModal">
-
-			</div>
-		</div>
-
-		<div class="overlay js-overlay-modal"></div>
 
 		<div id='menu'>
 			<div class='Social'>
@@ -633,6 +624,8 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="callOverlay"></div>
 
 	<div id="myModal" class="modal">
 		<div class="modal-content">
@@ -724,11 +717,6 @@
 	</script>
 
 	<script>
-		let costLeassyTools = 40000; // стоимость услуги leassyTools (изначальное значение)
-		let costYourTools = costLeassyTools - 10000; // стоимость услуги yourTools
-	</script>
-
-	<script>
 		const scrollUp = document.querySelector('.scroll-up-js');
 
 		scrollUp.addEventListener('click', () => {
@@ -767,6 +755,63 @@
 				{ opacity: 1, y: 0, duration: 1, stagger: 0.3 })
 		});
 
+	</script>
+
+	<script>
+		// Hours cost
+		document.addEventListener('DOMContentLoaded', () => {
+			const label = document.querySelectorAll('.hours_item_js');
+			const result = document.querySelector('.order__form_subtitle .result');
+			const hour1 = document.querySelector('#orderHour1');
+			const hour2 = document.querySelector('#orderHour2');
+			const hour3 = document.querySelector('#orderHour3');
+			const hour4 = document.querySelector('#orderHour4');
+			const hour5 = document.querySelector('#orderHour5');
+			const leassyTools = document.querySelector('#leassy-tools');
+			const yourTools = document.querySelector('#your-tools');
+
+			const costLeassyTools = 60000; // стоимость услуги leassyTools (изначальное значение)
+			const costYourTools = costLeassyTools - 10000; // стоимость услуги yourTools
+
+
+			if (result) result.innerHTML = `1 hours * ${costLeassyTools}`; // исходное значение при загрузке страницы
+
+
+			label.forEach((item) => {
+				console.log(item);
+				item.addEventListener('click', function (event) {
+
+					let el = event.target.innerHTML;
+					console.log(el);
+
+					if (leassyTools.checked) {
+						result.innerHTML = `${el} hours * ${costLeassyTools}`;
+						console.log(result);
+					}
+
+					if (yourTools.checked) {
+						result.innerHTML = `${el} hours * ${costYourTools}`;
+						console.log(result);
+					}
+				});
+			});
+
+			leassyTools.addEventListener('click', function () {
+				if (hour1.checked) result.innerHTML = `1 hours * ${costLeassyTools}`;
+				if (hour2.checked) result.innerHTML = `2 hours * ${costLeassyTools}`;
+				if (hour3.checked) result.innerHTML = `3 hours * ${costLeassyTools}`;
+				if (hour4.checked) result.innerHTML = `4 hours * ${costLeassyTools}`;
+				if (hour5.checked) result.innerHTML = `5 hours * ${costLeassyTools}`;
+			})
+
+			yourTools.addEventListener('click', function () {
+				if (hour1.checked) result.innerHTML = `1 hours * ${costYourTools}`;
+				if (hour2.checked) result.innerHTML = `2 hours * ${costYourTools}`;
+				if (hour3.checked) result.innerHTML = `3 hours * ${costYourTools}`;
+				if (hour4.checked) result.innerHTML = `4 hours * ${costYourTools}`;
+				if (hour5.checked) result.innerHTML = `5 hours * ${costYourTools}`;
+			})
+		});
 	</script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFgUeK7NwUkRFuVfqyxqoC8QMiRVwbMko&amp;callback=initAutocomplete&amp;libraries=places&amp;callback=initAutocomplete" async=""
